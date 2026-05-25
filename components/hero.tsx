@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { profile, socials } from '@/data/profile';
-import { Icon } from './icons';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { profile, socials } from "@/data/profile";
+import { Icon } from "./icons";
 
 export function Hero() {
   return (
@@ -33,16 +33,22 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              {profile.available ? 'Available for new opportunities' : 'Currently working on projects'}
+              {profile.available
+                ? "Available for new opportunities"
+                : "Currently working on projects"}
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.05,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="mt-6 font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]"
             >
-              {profile.name}.{' '}
+              {profile.name}.{" "}
               <span className="text-muted">{profile.role.toLowerCase()}</span>
               <br />
               building thoughtful web experiences.
@@ -51,7 +57,11 @@ export function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="mt-6 max-w-xl text-lg text-muted leading-relaxed"
             >
               {profile.tagline}
@@ -60,7 +70,11 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="mt-8 flex flex-wrap items-center gap-3"
             >
               <a
@@ -70,10 +84,13 @@ export function Hero() {
                 View projects <Icon.arrow size={16} />
               </a>
               <a
-                href={profile.resumeUrl}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-2.5 text-sm font-medium hover:border-accent/60 hover:text-accent transition"
+                href="/resume.pdf"
+                download="Amit-Patel-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-lg bg-accent px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
               >
-                <Icon.download size={16} /> Download resume
+                Download Resume
               </a>
 
               <div className="ml-1 flex items-center gap-1">
@@ -109,7 +126,11 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.94, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.8,
+              delay: 0.15,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="relative mx-auto w-full max-w-sm md:max-w-md"
           >
             {/* Soft halo */}
@@ -129,7 +150,9 @@ export function Hero() {
               />
               {/* Corner accent badge */}
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl bg-bg/85 backdrop-blur border border-border px-3 py-2 text-xs">
-                <span className="font-mono uppercase tracking-wider text-accent">React · Next.js</span>
+                <span className="font-mono uppercase tracking-wider text-accent">
+                  React · Next.js
+                </span>
                 <span className="text-muted">v14</span>
               </div>
             </div>
