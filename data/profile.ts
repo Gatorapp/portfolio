@@ -105,6 +105,17 @@ export const experience = [
 
 export const projects = [
   {
+    title: 'Raaga Ethnic Couture',
+    blurb: 'Production e-commerce storefront and inventory system for an ethnic fashion boutique.',
+    description:
+      'Built and deployed a responsive Next.js commerce experience with product and inventory administration, multi-image product galleries, Stripe test checkout, Neon database persistence, order management, and customer confirmation emails.',
+    tags: ['Next.js', 'TypeScript', 'Stripe', 'Neon', 'Tailwind'],
+    image: '/images/cover-raaga.png',
+    repo: 'https://github.com/Gatorapp/RaagaEthic',
+    demo: 'https://raaga-ethic.vercel.app',
+    featured: true
+  },
+  {
     title: 'CarePulse',
     blurb: 'Hospital management web app with patient/admin views.',
     description:
